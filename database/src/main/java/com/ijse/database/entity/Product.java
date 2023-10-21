@@ -29,5 +29,5 @@ public class Product {
 
     @ManyToOne //(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
-    private Category category;
+    private Category category; 
 }
