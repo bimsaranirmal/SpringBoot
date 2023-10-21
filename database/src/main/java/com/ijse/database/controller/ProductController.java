@@ -52,4 +52,9 @@ public class ProductController {
     public Product updateProduct(@PathVariable Long id, @RequestBody Product product){
         return productService.updateProduct(id, product );
     }
+
+    @GetMapping("/categories/{id}/products")
+    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable Long id){
+        return ResponseEntity.ok().body(productService.getProductsByCategory(id));
+    }
 }
